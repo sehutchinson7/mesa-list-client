@@ -1,0 +1,70 @@
+const store = require('./store')
+
+const signUpSuccess = function (data) {
+  $('#message').text('Successfully signed up')
+  $('#message').css('background-color', 'green')
+  // console.log('signInSuccess ran. Data is ', data)
+}
+
+const signUpFailure = function (data) {
+  $('#message').text('Failure signing up')
+  $('#message').css('background-color', 'red')
+  // console.log('signInSuccess ran. Data is ', data)
+}
+
+const signInSuccess = function (data) { // represents what the api is sending back (the api response)
+  $('#message').text('Successfully signed in')
+  $('#message').css('background-color', 'green')
+  // console.log('signInSuccess ran. Data is ', data)
+  // setTimeout(() => $('#message').text('Successfully signed in'), 2000)
+  // $('#game-board').removeClass('hidden')
+  $('#change-password').removeClass('hidden')
+  $('#sign-out').removeClass('hidden')
+  $('#sign-in').addClass('hidden')
+  $('#sign-up').addClass('hidden')
+  store.user = data.user
+  console.log(store)
+}
+
+const signInFailure = function (data) {
+  $('#message').text('Failure signing in')
+  $('#message').css('background-color', 'red')
+  // console.log('signInSuccess ran. Data is ', data)
+}
+
+const signOutSuccess = function (data) {
+  $('#message').text('Successfully signed out')
+  $('#message').css('background-color', 'green')
+  // console.log('signInSuccess ran. Data is ', data)
+  store.user = null
+  $('#change-password').addClass('hidden')
+  $('#sign-out').addClass('hidden')
+  $('#sign-in').removeClass('hidden')
+  $('#sign-up').removeClass('hidden')
+  $('input[type=email]').val('')
+  $('input[type=text]').val('')
+  $('input[type=password]').val('')
+  $('.total').addClass('hidden') // hide total games played upon sign out
+}
+
+const changePasswordSuccess = function (data) {
+  $('#message').text('Successfully changed password')
+  $('#message').css('background-color', 'green')
+  // console.log('signInSuccess ran. Data is ', data)
+}
+
+const changePasswordFailure = function (data) {
+  $('#message').text('Failure changing password')
+  $('#message').css('background-color', 'red')
+  // console.log('signInSuccess ran. Data is ', data)
+}
+
+module.exports = {
+  signUpSuccess,
+  signUpFailure,
+  signInSuccess,
+  signInFailure,
+  signOutSuccess,
+  changePasswordSuccess,
+  changePasswordFailure
+}
