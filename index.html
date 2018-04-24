@@ -12,7 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Endangered Species in Massachuestts</h1>
+      <h1>Endangered Species in Massachusetts</h1>
       <form id="sign-up" class="border">
         <fieldset>
           <legend>Sign up</legend>
@@ -52,11 +52,11 @@
       <form id="create-animal">
         <legend>Add Animal to database</legend>
         <p>Is the animal endangered?</p>
-        <input type="radio" class="Yes" name="create_radio">
+        <input type="radio" class="Yes" name="animal[endangered]" value='true'>
         <label for="Yes">Yes</label>
-        <input type="radio" class="No" name="create_radio">
+        <input type="radio" class="No" name="animal[endangered]" value='false'>
         <label for="No">No</label>
-        <input type="text" name="name" placeholder="animal name">
+        <input type="text" name="animal[name]" placeholder="animal name">
         <input type="submit" value="Add Animal">
       </form>
 

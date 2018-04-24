@@ -47,7 +47,15 @@ const onGetAnimals = function (event) {
   event.preventDefault()
   api.getAllAnimals()
     .then(ui.getAnimalSuccess)
-    .catch(ui.failure)
+    .catch(ui.getAnimalfailure)
+}
+
+const onAddAnimal = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.addAnimal(data)
+    .then(ui.addAnimalSuccess)
+    .catch(ui.addAnimalfailure)
 }
 
 const addHandlers = () => {
@@ -56,6 +64,7 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
   $('#get-all').on('submit', onGetAnimals)
+  $('#create-animal').on('submit', onAddAnimal)
 }
 
 module.exports = {

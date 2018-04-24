@@ -57,7 +57,7 @@ const changePasswordFailure = function (data) {
 const getAnimalSuccess = function (data) {
   $('#message').text('Successfully retrieved animals')
   $('#message').css('background-color', 'green')
-  console.log(data)
+  //console.log(data)
   const showAnimalsHtml = showAnimalsTemplate({ animals: data.animals })
   $('.content').append(showAnimalsHtml)
 }
@@ -65,6 +65,17 @@ const getAnimalSuccess = function (data) {
 const getAnimalFailure = function (data) {
   $('#message').text('Failure retrieving animals')
   $('#message').css('background-color', 'red')
+}
+
+const addAnimalSuccess = function (data) {
+  $('#message').text('Successfully added an animal')
+  $('#message').css('background-color', 'green')
+  console.log(data)
+}
+
+const addAnimalFailure = function (data) {
+  $('#message').text('Successfully added an animal')
+  $('#message').css('background-color', 'green')
 }
 
 module.exports = {
@@ -76,5 +87,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   getAnimalSuccess,
-  getAnimalFailure
+  getAnimalFailure,
+  addAnimalSuccess,
+  addAnimalFailure
 }

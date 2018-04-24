@@ -51,10 +51,23 @@ const getAllAnimals = function () {
   })
 }
 
+const addAnimal = function (data) {
+  return $.ajax({
+    url: config.apiUrl + `/animals`,
+    method: 'POST',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  getAllAnimals
+  getAllAnimals,
+  addAnimal
 }
