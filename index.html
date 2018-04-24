@@ -47,5 +47,34 @@
         </fieldset>
       </form>
       <div id="message"></div>
+
+      <form id="create-animal">
+        <legend>Add Animal to database</legend>
+        <p>Is the animal endangered?</p>
+        <input type="checkbox" id="Yes">
+        <label for="Yes">Yes</label>
+        <input type="checkbox" id="No">
+        <label for="No">No</label>
+        <input type="text" name="name" placeholder="animal name">
+        <input type="submit" value="Add Animal">
+      </form>
+
+    <form id="update-animal">
+      <legend>Update existing animal in database</legend>
+      <p>Is the animal endangered?</p>
+      <input type="radio" id="Yes">
+      <label for="Yes">Yes</label>
+      <input type="radio" id="No">
+      <label for="No">No</label>
+      <input type="text" name="name" placeholder="animal name">
+      <input type="integer" name="Animal_id" placeholder="id value">
+      <input type="submit" value="Update">
+    </form>
+
+    <form id="delete-animal">
+      <legend>Delete animal from database</legend>
+      <input type="text" name="name" placeholder="animal name">
+      <input type="integer" name="Animal_id" placeholder="id value">
+      <input type="submit" value="Update">
     </body>
 </html>

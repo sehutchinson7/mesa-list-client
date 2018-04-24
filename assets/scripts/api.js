@@ -40,9 +40,21 @@ const signOut = function () {
   })
 }
 
+const addAnimal = function () {
+  return $.ajax({
+    url: config.apiUrl + '/animals',
+    method: 'POST',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  addAnimal
 }
