@@ -18,6 +18,7 @@ const signInSuccess = function (data) { // represents what the api is sending ba
   $('#sign-out').removeClass('hidden')
   $('#sign-in').addClass('hidden')
   $('#sign-up').addClass('hidden')
+  $('.content').removeClass('hidden')
   store.user = data.user
 }
 
@@ -39,7 +40,6 @@ const signOutSuccess = function (data) {
   $('input[type=email]').val('')
   $('input[type=text]').val('')
   $('input[type=password]').val('')
-  $('.total').addClass('hidden') // hide total games played upon sign out
 }
 
 const changePasswordSuccess = function (data) {
@@ -78,6 +78,16 @@ const addAnimalFailure = function (data) {
   $('#message').css('background-color', 'green')
 }
 
+const updateAnimalSuccess = function (data) {
+  $('#message').text('Successfully updated database') // Go back here and tell user which animal they updated
+  $('#message').css('background-color', 'green')
+}
+
+const updateAnimalFailure = function (data) {
+  $('#message').text('Failure updating database')
+  $('#message').css('background-color', 'red')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -89,5 +99,7 @@ module.exports = {
   getAnimalSuccess,
   getAnimalFailure,
   addAnimalSuccess,
-  addAnimalFailure
+  addAnimalFailure,
+  updateAnimalSuccess,
+  updateAnimalFailure,
 }

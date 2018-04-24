@@ -55,7 +55,20 @@ const onAddAnimal = function (event) {
   const data = getFormFields(event.target)
   api.addAnimal(data)
     .then(ui.addAnimalSuccess)
-    .catch(ui.addAnimalfailure)
+    .catch(ui.addAnimalFailure)
+}
+
+const onUpdateAnimal = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.updateAnimal(data)
+    .then(ui.updateAnimalSuccess)
+    .catch(ui.updateAnimalFailure)
+}
+
+const onClearAnimals = function () {
+  event.preventDefault()
+  $('.handlebars').hide()
 }
 
 const addHandlers = () => {
@@ -65,6 +78,8 @@ const addHandlers = () => {
   $('#change-password').on('submit', onChangePassword)
   $('#get-all').on('submit', onGetAnimals)
   $('#create-animal').on('submit', onAddAnimal)
+  $('#update-animal').on('submit', onUpdateAnimal)
+  $('#clear-list').on('submit', onClearAnimals)
 }
 
 module.exports = {

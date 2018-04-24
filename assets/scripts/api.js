@@ -63,11 +63,23 @@ const addAnimal = function (data) {
   })
 }
 
+const updateAnimal = function (data) {
+  return $.ajax({
+    url: config.apiUrl + `/animals`,
+    method: 'UPDATE',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
   getAllAnimals,
-  addAnimal
+  addAnimal,
+  updateAnimal
 }
