@@ -40,10 +40,10 @@ const signOut = function () {
   })
 }
 
-const addAnimal = function () {
+const getAllAnimals = function () {
   return $.ajax({
-    url: config.apiUrl + '/animals',
-    method: 'POST',
+    url: config.apiUrl + `/animals`,
+    method: 'GET',
     headers: {
       contentType: 'application/json',
       Authorization: 'Token token=' + store.user.token
@@ -56,5 +56,5 @@ module.exports = {
   signIn,
   changePassword,
   signOut,
-  addAnimal
+  getAllAnimals
 }

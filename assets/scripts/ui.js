@@ -1,29 +1,24 @@
 const store = require('./store')
+const showAnimalsTemplate = require('./templates/animal-listing.handlebars')
 
 const signUpSuccess = function (data) {
   $('#message').text('Successfully signed up')
   $('#message').css('background-color', 'green')
-  // console.log('signInSuccess ran. Data is ', data)
 }
 
 const signUpFailure = function (data) {
   $('#message').text('Failure signing up')
   $('#message').css('background-color', 'red')
-  // console.log('signInSuccess ran. Data is ', data)
 }
 
 const signInSuccess = function (data) { // represents what the api is sending back (the api response)
   $('#message').text('Successfully signed in')
   $('#message').css('background-color', 'green')
-  // console.log('signInSuccess ran. Data is ', data)
-  // setTimeout(() => $('#message').text('Successfully signed in'), 2000)
-  // $('#game-board').removeClass('hidden')
   $('#change-password').removeClass('hidden')
   $('#sign-out').removeClass('hidden')
   $('#sign-in').addClass('hidden')
   $('#sign-up').addClass('hidden')
   store.user = data.user
-  console.log(store)
 }
 
 const signInFailure = function (data) {
@@ -59,6 +54,19 @@ const changePasswordFailure = function (data) {
   // console.log('signInSuccess ran. Data is ', data)
 }
 
+const getAnimalSuccess = function (data) {
+  $('#message').text('Successfully retrieved animals')
+  $('#message').css('background-color', 'green')
+  console.log(data)
+  const showAnimalsHtml = showAnimalsTemplate({ animals: data.animals })
+  $('.content').append(showAnimalsHtml)
+}
+
+const getAnimalFailure = function (data) {
+  $('#message').text('Failure retrieving animals')
+  $('#message').css('background-color', 'red')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -66,5 +74,7 @@ module.exports = {
   signInFailure,
   signOutSuccess,
   changePasswordSuccess,
-  changePasswordFailure
+  changePasswordFailure,
+  getAnimalSuccess,
+  getAnimalFailure
 }

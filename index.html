@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Endangered Animals in Massachusetts</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,7 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Endangered Species in Massachuestts</h1>
       <form id="sign-up" class="border">
         <fieldset>
           <legend>Sign up</legend>
@@ -49,18 +49,12 @@
 
       <div id="message"></div>
 
-      <form id="get-all">
-        <fieldset>
-          <input type="submit" value="View All Animals">
-        </fieldset>
-      </form>
-
       <form id="create-animal">
         <legend>Add Animal to database</legend>
         <p>Is the animal endangered?</p>
-        <input type="checkbox" id="Yes">
+        <input type="radio" class="Yes" name="create_radio">
         <label for="Yes">Yes</label>
-        <input type="checkbox" id="No">
+        <input type="radio" class="No" name="create_radio">
         <label for="No">No</label>
         <input type="text" name="name" placeholder="animal name">
         <input type="submit" value="Add Animal">
@@ -69,9 +63,9 @@
     <form id="update-animal">
       <legend>Update existing animal in database</legend>
       <p>Is the animal endangered?</p>
-      <input type="radio" id="Yes">
+      <input type="radio" class="Yes" name="update_radio">
       <label for="Yes">Yes</label>
-      <input type="radio" id="No">
+      <input type="radio" class="No"name="update_radio">
       <label for="No">No</label>
       <input type="text" name="name" placeholder="animal name">
       <input type="integer" name="Animal_id" placeholder="id value">
@@ -82,6 +76,16 @@
       <legend>Delete animal from database</legend>
       <input type="text" name="name" placeholder="animal name">
       <input type="integer" name="Animal_id" placeholder="id value">
-      <input type="submit" value="Update">
-    </body>
+      <input type="submit" value="Delete">
+    </form>
+
+    <form id="get-all">
+      <fieldset>
+        <input type="submit" value="View All Animals">
+        <div class="content">
+
+        </div>
+      </fieldset>
+    </form>
+  </body>
 </html>

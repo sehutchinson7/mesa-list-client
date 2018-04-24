@@ -43,11 +43,19 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
+const onGetAnimals = function (event) {
+  event.preventDefault()
+  api.getAllAnimals()
+    .then(ui.getAnimalSuccess)
+    .catch(ui.failure)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
+  $('#get-all').on('submit', onGetAnimals)
 }
 
 module.exports = {
