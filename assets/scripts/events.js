@@ -55,6 +55,7 @@ const onAddAnimal = function (event) {
   const data = getFormFields(event.target)
   api.addAnimal(data)
     .then(ui.addAnimalSuccess)
+    // .then(() => onGetAnimals) on successful creation of animal, automatically adds to databa
     .catch(ui.addAnimalFailure)
 }
 

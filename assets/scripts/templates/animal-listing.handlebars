@@ -13,13 +13,10 @@
     No name provided.
   {{/if}}
   </li>
-  <li>Endangered Status:{{#if animal.endangered}}
-    {{animal.endangered}}
-  {{else}}
-    No endangered status provided.
-  {{/if}}
+  <li>Endangered Status: {{animal.endangered}}
   </li>
-  <li>Added by:{{#if animal.user_id}}
+  </li>
+  <li>User:{{#if animal.user_id}}
     {{animal.user.email}}
   {{else}}
     No user information provided.

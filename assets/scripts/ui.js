@@ -61,7 +61,7 @@ const getAnimalSuccess = function (data) {
   $('#message').text('Successfully retrieved animals')
   $('#message').css('background-color', 'green')
   const showAnimalsHtml = showAnimalsTemplate({ animals: data.animals })
-  $('.handlebars').empty() // Prevents the list from duplicating if user clicks "View All Animals" multiple times
+  $('.handlebars').empty() // Prevents the list from duplicating if user clicks "View All Animals" multiple time
   $('.content').append(showAnimalsHtml)
 }
 
