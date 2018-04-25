@@ -28,13 +28,11 @@ const signInSuccess = function (data) { // represents what the api is sending ba
 const signInFailure = function (data) {
   $('#message').text('Failure signing in')
   $('#message').css('background-color', 'red')
-  // console.log('signInSuccess ran. Data is ', data)
 }
 
 const signOutSuccess = function (data) {
   $('#message').text('Successfully signed out')
   $('#message').css('background-color', 'green')
-  // console.log('signInSuccess ran. Data is ', data)
   store.user = null
   $('#change-password').addClass('hidden')
   $('#sign-out').addClass('hidden')
@@ -43,24 +41,25 @@ const signOutSuccess = function (data) {
   $('input[type=email]').val('')
   $('input[type=text]').val('')
   $('input[type=password]').val('')
+  $('#create-animal').addClass('hidden')
+  $('#update-animal').addClass('hidden')
+  $('#delete-animal').addClass('hidden')
+  $('.content').addClass('hidden')
 }
 
 const changePasswordSuccess = function (data) {
   $('#message').text('Successfully changed password')
   $('#message').css('background-color', 'green')
-  // console.log('signInSuccess ran. Data is ', data)
 }
 
 const changePasswordFailure = function (data) {
   $('#message').text('Failure changing password')
   $('#message').css('background-color', 'red')
-  // console.log('signInSuccess ran. Data is ', data)
 }
 
 const getAnimalSuccess = function (data) {
   $('#message').text('Successfully retrieved animals')
   $('#message').css('background-color', 'green')
-  //console.log(data)
   const showAnimalsHtml = showAnimalsTemplate({ animals: data.animals })
   $('.content').append(showAnimalsHtml)
 }
