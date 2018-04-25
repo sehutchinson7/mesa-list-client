@@ -1,10 +1,22 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+body {
+  background-color: #73ba9b;
+}
+
 .content {
   height: 300px;
   border: 2px solid black;
   text-align: center;
   overflow: scroll;
-  background-color: #98FB98;
+  background-color: #c8c8c8;
+}
+
+h1 {
+  font-family: 'Karla', sans-serif;
+}
+
+.handlebars {
+
 }
