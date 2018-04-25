@@ -19,6 +19,9 @@ const onSignIn = function (event) {
 
   const data = getFormFields(this)
   document.getElementById('sign-in').reset()
+  document.getElementById('create-animal').reset() // clear add animal form on sign in
+  document.getElementById('update-animal').reset() // clear update animal form on sign in
+  document.getElementById('delete-animal').reset() // clear delete animal form on sign in
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
