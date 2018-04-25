@@ -49,7 +49,7 @@
 
       <div id="message"></div>
 
-      <form id="create-animal">
+      <form id="create-animal" class="hidden">
         <legend>Add Animal to database</legend>
         <p>Is the animal endangered?</p>
         <input type="radio" class="Yes" name="animal[endangered]" value='true'>
@@ -60,7 +60,7 @@
         <input type="submit" value="Add Animal">
       </form>
 
-    <form id="update-animal">
+    <form id="update-animal" class="hidden">
       <legend>Update existing animal in database</legend>
       <p>Is the animal endangered?</p>
       <input type="radio" class="Yes" name="update_radio">
@@ -72,7 +72,7 @@
       <input type="submit" value="Update">
     </form>
 
-    <form id="delete-animal">
+    <form id="delete-animal" class="hidden">
       <legend>Delete animal from database</legend>
       <input type="text" name="name" placeholder="animal name">
       <input type="integer" name="Animal_id" placeholder="id value">

@@ -19,6 +19,9 @@ const signInSuccess = function (data) { // represents what the api is sending ba
   $('#sign-in').addClass('hidden')
   $('#sign-up').addClass('hidden')
   $('.content').removeClass('hidden')
+  $('#create-animal').removeClass('hidden')
+  $('#update-animal').removeClass('hidden')
+  $('#delete-animal').removeClass('hidden')
   store.user = data.user
 }
 
@@ -88,6 +91,16 @@ const updateAnimalFailure = function (data) {
   $('#message').css('background-color', 'red')
 }
 
+const deleteAnimalSuccess = function (data) {
+  $('#message').text('Successfully deleted')
+  $('#message').css('background-color', 'green')
+}
+
+const deleteAnimalFailure = function (data) {
+  $('#message').text('Cannot delete animal')
+  $('#message').css('background-color', 'red')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -102,4 +115,6 @@ module.exports = {
   addAnimalFailure,
   updateAnimalSuccess,
   updateAnimalFailure,
+  deleteAnimalSuccess,
+  deleteAnimalFailure
 }
