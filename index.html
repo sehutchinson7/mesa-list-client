@@ -63,12 +63,12 @@
     <form id="update-animal" class="hidden">
       <legend>Update existing animal in database</legend>
       <p>Is the animal endangered?</p>
-      <input type="radio" class="Yes" name="update_radio">
+      <input type="radio" class="Yes" name="animal[endangered]" value='true'>
       <label for="Yes">Yes</label>
-      <input type="radio" class="No"name="update_radio">
+      <input type="radio" class="No"name="animal[endangered]" value='false'>
       <label for="No">No</label>
-      <input type="text" name="name" placeholder="animal name">
-      <input type="integer" name="Animal_id" placeholder="id value">
+      <input type="text" name="animal[name]" placeholder="animal name">
+      <input type="integer" name="animal[id]" placeholder="id value">
       <input type="submit" value="Update">
     </form>
 

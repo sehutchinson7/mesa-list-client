@@ -64,9 +64,10 @@ const addAnimal = function (data) {
 }
 
 const updateAnimal = function (data) {
+  console.log(data)
   return $.ajax({
-    url: config.apiUrl + `/animals`,
-    method: 'UPDATE',
+    url: config.apiUrl + `/animals/` + data.animal.id,
+    method: 'PATCH',
     headers: {
       contentType: 'application/json',
       Authorization: 'Token token=' + store.user.token
