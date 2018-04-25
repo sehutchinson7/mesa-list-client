@@ -1,6 +1,12 @@
 {{#each animals as |animal|}}
 <div class="handlebars">
 <h1 data-id="{{animal.id}}"> <small>Species: {{animal.name}}</small></h1>
+  <li>Animal ID:{{#if animal.id}}
+    {{animal.id}}
+  {{else}}
+    No ID specified for this animal.
+  {{/if}}
+  </li>
   <li>Name:{{#if animal.name}}
     {{animal.name}}
   {{else}}
@@ -17,12 +23,6 @@
     {{animal.user.email}}
   {{else}}
     No user information provided.
-  {{/if}}
-  </li>
-  <li>User Id:{{#if animal.user_id}}
-    {{animal.user_id}}
-  {{else}}
-    No user id information provided.
   {{/if}}
   </li>
 </div>

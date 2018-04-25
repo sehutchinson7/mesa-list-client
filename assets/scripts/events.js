@@ -81,6 +81,7 @@ const addHandlers = () => {
   $('#create-animal').on('submit', onAddAnimal)
   $('#update-animal').on('submit', onUpdateAnimal)
   $('#clear-list').on('submit', onClearAnimals)
+//  $('#delete-animal').on('submit', onDeleteAnimal)
 }
 
 module.exports = {
