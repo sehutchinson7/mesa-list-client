@@ -3,17 +3,17 @@ const showAnimalsTemplate = require('./templates/animal-listing.handlebars')
 
 const signUpSuccess = function (data) {
   $('#message').text('Successfully signed up')
-  $('#message').css('background-color', 'green')
+  $('#message').css('background-color', '#d5fdd5')
 }
 
 const signUpFailure = function (data) {
   $('#message').text('Failure signing up')
-  $('#message').css('background-color', 'red')
+  $('#message').css('background-color', '#ff6666')
 }
 
 const signInSuccess = function (data) { // represents what the api is sending back (the api response)
   $('#message').text('Successfully signed in')
-  $('#message').css('background-color', 'green')
+  $('#message').css('background-color', '#d5fdd5')
   $('#change-password').removeClass('hidden')
   $('#sign-out').removeClass('hidden')
   $('#sign-in').addClass('hidden')
@@ -27,12 +27,12 @@ const signInSuccess = function (data) { // represents what the api is sending ba
 
 const signInFailure = function (data) {
   $('#message').text('Failure signing in')
-  $('#message').css('background-color', 'red')
+  $('#message').css('background-color', '#ff6666')
 }
 
 const signOutSuccess = function (data) {
   $('#message').text('Successfully signed out')
-  $('#message').css('background-color', 'green')
+  $('#message').css('background-color', '#d5fdd5')
   store.user = null
   $('#change-password').addClass('hidden')
   $('#sign-out').addClass('hidden')
@@ -49,17 +49,17 @@ const signOutSuccess = function (data) {
 
 const changePasswordSuccess = function (data) {
   $('#message').text('Successfully changed password')
-  $('#message').css('background-color', 'green')
+  $('#message').css('background-color', '#d5fdd5')
 }
 
 const changePasswordFailure = function (data) {
   $('#message').text('Failure changing password')
-  $('#message').css('background-color', 'red')
+  $('#message').css('background-color', '#ff6666')
 }
 
 const getAnimalSuccess = function (data) {
   $('#message').text('Successfully retrieved animals')
-  $('#message').css('background-color', 'green')
+  $('#message').css('background-color', '#d5fdd5')
   const showAnimalsHtml = showAnimalsTemplate({ animals: data.animals })
   $('.handlebars').empty() // Prevents the list from duplicating if user clicks "View All Animals" multiple time
   $('.content').append(showAnimalsHtml)
@@ -67,38 +67,38 @@ const getAnimalSuccess = function (data) {
 
 const getAnimalFailure = function (data) {
   $('#message').text('Failure retrieving animals')
-  $('#message').css('background-color', 'red')
+  $('#message').css('background-color', '#ff6666')
 }
 
 const addAnimalSuccess = function (data) {
   $('#message').text('Successfully added an animal')
-  $('#message').css('background-color', 'green')
+  $('#message').css('background-color', '#d5fdd5')
   console.log(data)
 }
 
 const addAnimalFailure = function (data) {
-  $('#message').text('Successfully added an animal')
-  $('#message').css('background-color', 'green')
+  $('#message').text('Failure adding an animal')
+  $('#message').css('background-color', '#ff6666')
 }
 
 const updateAnimalSuccess = function (data) {
   $('#message').text('Successfully updated database') // Go back here and tell user which animal they updated
-  $('#message').css('background-color', 'green')
+  $('#message').css('background-color', '#d5fdd5')
 }
 
 const updateAnimalFailure = function (data) {
   $('#message').text('Failure updating database')
-  $('#message').css('background-color', 'red')
+  $('#message').css('background-color', '#ff6666')
 }
 
 const deleteAnimalSuccess = function (data) {
   $('#message').text('Successfully deleted')
-  $('#message').css('background-color', 'green')
+  $('#message').css('background-color', '#d5fdd5')
 }
 
 const deleteAnimalFailure = function (data) {
   $('#message').text('Cannot delete animal')
-  $('#message').css('background-color', 'red')
+  $('#message').css('background-color', '#ff6666')
 }
 
 module.exports = {
