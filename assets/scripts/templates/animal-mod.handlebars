@@ -1,5 +1,8 @@
-{{#each animals as |animal|}}
 <div class="handlebars-mod">
+  <p>Current user: {{user.email}}
+  </p>
+
+{{#each user.animals as |animal|}}
 <h1 data-id="{{animal.id}}"> <small>Species: {{animal.name}}</small></h1>
   <li>Animal ID:{{#if animal.id}}
     {{animal.id}}
@@ -15,7 +18,6 @@
   </li>
   <li>Endangered Status: {{animal.endangered}}
   </li>
-  <li>User:{{animal.user.email}}
-  </li>
-</div>
 {{/each}}
+
+</div>

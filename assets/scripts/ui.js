@@ -78,11 +78,11 @@ const getUserAnimalSuccess = function (data) {
   $('#message').text('Successfully retrieved animals')
   $('#message').css('background-color', '#d5fdd5')
   const showUserAnimalsHtml = showUserAnimalsTemplate({
-    animals: data.user.animals
+    user: data.user
   })
   $('.handlebars-mod').empty() // Prevents the list from duplicating if user clicks "View All Animals" multiple time
   $('.content').append(showUserAnimalsHtml)
-  console.log(data.user.animals)
+  console.log(data.user)
   if (data.user.animals.length === 0) {
     $('#update-message').text("You haven't added any animals yet")
     $('#update-message').css('background-color', '#ff6666')
