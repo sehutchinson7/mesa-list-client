@@ -48,7 +48,7 @@ const onGetAnimals = function (event) {
   event.preventDefault()
   api.getAllAnimals()
     .then(ui.getAnimalSuccess)
-     // User can switch between "View All" and "View My" without hitting "Clear"
+  // User can switch between "View All" and "View My" without hitting "Clear"
     .then(onClearAnimals())
     .catch(ui.getAnimalFailure)
 }
@@ -57,7 +57,7 @@ const onGetUserAnimals = function (event) {
   event.preventDefault()
   api.getUserAnimals()
     .then(ui.getUserAnimalSuccess)
-     // User can switch between "View All" and "View My" without hitting "Clear"
+  // User can switch between "View All" and "View My" without hitting "Clear"
     .then(onClearAnimals())
     .catch(ui.getUserAnimalFailure)
 }

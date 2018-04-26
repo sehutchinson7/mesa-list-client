@@ -1,6 +1,7 @@
 const store = require('./store')
 const showAnimalsTemplate = require('./templates/animal-listing.handlebars')
 const showUserAnimalsTemplate = require('./templates/animal-mod.handlebars')
+const global = require('./global')
 
 const signUpSuccess = function (data) {
   $('#message').text('Successfully signed up')
@@ -81,7 +82,8 @@ const getUserAnimalSuccess = function (data) {
   })
   $('.handlebars-mod').empty() // Prevents the list from duplicating if user clicks "View All Animals" multiple time
   $('.content').append(showUserAnimalsHtml)
-  if (data.foods.length === 0) {
+  console.log(data.user.animals)
+  if (data.user.animals.length === 0) {
     $('#update-message').text("You haven't added any animals yet")
     $('#update-message').css('background-color', '#ff6666')
     setTimeout(() => {
@@ -93,6 +95,10 @@ const getUserAnimalSuccess = function (data) {
 const addAnimalSuccess = function (data) {
   $('#message').text('Successfully added an animal')
   $('#message').css('background-color', '#d5fdd5')
+  // clear form when user clicks "Add Animal"
+  $('input[type=text]').val('')
+  $('input[type=radio]').prop('checked', false)
+  global.clearForms()
 }
 
 const addAnimalFailure = function (data) {
@@ -103,21 +109,25 @@ const addAnimalFailure = function (data) {
 const updateAnimalSuccess = function (data) {
   $('#message').text('Successfully updated database') // Go back here and tell user which animal they updated
   $('#message').css('background-color', '#d5fdd5')
+  global.clearForms()
 }
 
 const updateAnimalFailure = function (data) {
   $('#message').text('Failure updating database')
   $('#message').css('background-color', '#ff6666')
+  global.clearForms()
 }
 
 const deleteAnimalSuccess = function (data) {
   $('#message').text('Successfully deleted')
   $('#message').css('background-color', '#d5fdd5')
+  global.clearForms()
 }
 
 const deleteAnimalFailure = function (data) {
   $('#message').text('Cannot delete animal')
   $('#message').css('background-color', '#ff6666')
+  global.clearForms()
 }
 
 module.exports = {
