@@ -82,7 +82,6 @@ const getUserAnimalSuccess = function (data) {
   })
   $('.handlebars-mod').empty() // Prevents the list from duplicating if user clicks "View All Animals" multiple time
   $('.content').append(showUserAnimalsHtml)
-  console.log(data.user)
   if (data.user.animals && data.user.animals.length === 0) {
     $('#update-message').text("You haven't added any animals yet")
     $('#update-message').css('background-color', '#ff6666')
