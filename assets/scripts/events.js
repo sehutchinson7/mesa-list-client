@@ -43,6 +43,8 @@ const onSignOut = function (event) {
   // console.log('sign out ran')
   api.signOut()
     .then(ui.signOutSuccess)
+    // clears the list after a sign out so next user who signs in starts with no list being displayed
+    .then(onClearAnimals())
     .catch(ui.signOutFailure)
 }
 
@@ -58,7 +60,7 @@ const onAddAnimal = function (event) {
   const data = getFormFields(event.target)
   api.addAnimal(data)
     .then(ui.addAnimalSuccess)
-    // .then(() => onGetAnimals) on successful creation of animal, automatically adds to databa
+    //.then(() => onGetAnimals()) on successful creation of animal, automatically adds to databa
     .catch(ui.addAnimalFailure)
 }
 
