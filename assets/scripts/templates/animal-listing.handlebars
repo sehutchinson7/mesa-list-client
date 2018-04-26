@@ -11,7 +11,7 @@
   </li>
   </li>
   <li>User:{{#if animal.user_id}}
-    {{animal.user.email}}
+    <a href="mailto:{{animal.user.email}}">{{animal.user.email}}</a>
   {{else}}
     No user information provided.
   {{/if}}
