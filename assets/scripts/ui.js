@@ -1,5 +1,6 @@
 const store = require('./store')
 const showAnimalsTemplate = require('./templates/animal-listing.handlebars')
+const showUserAnimalsTemplate = require('./templates/animal-mod.handlebars')
 
 const signUpSuccess = function (data) {
   $('#message').text('Successfully signed up')
@@ -70,6 +71,15 @@ const getAnimalFailure = function (data) {
   $('#message').css('background-color', '#ff6666')
 }
 
+const getUserAnimalSuccess = function (data) {
+  console.log(data)
+  $('#message').text('Successfully retrieved animals')
+  $('#message').css('background-color', '#d5fdd5')
+  const showUserAnimalsHtml = showUserAnimalsTemplate({ animals: data.user.animals })
+  $('.handlebars').empty() // Prevents the list from duplicating if user clicks "View All Animals" multiple time
+  $('.content').append(showUserAnimalsHtml)
+}
+
 const addAnimalSuccess = function (data) {
   $('#message').text('Successfully added an animal')
   $('#message').css('background-color', '#d5fdd5')
@@ -110,6 +120,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   getAnimalSuccess,
+  getUserAnimalSuccess,
   getAnimalFailure,
   addAnimalSuccess,
   addAnimalFailure,

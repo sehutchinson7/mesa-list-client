@@ -51,6 +51,17 @@ const getAllAnimals = function () {
   })
 }
 
+const getUserAnimals = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/users/' + store.user.id,
+    method: 'GET',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 const addAnimal = function (data) {
   return $.ajax({
     url: config.apiUrl + `/animals`,
@@ -95,6 +106,7 @@ module.exports = {
   changePassword,
   signOut,
   getAllAnimals,
+  getUserAnimals,
   addAnimal,
   updateAnimal,
   deleteAnimal

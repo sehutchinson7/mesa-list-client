@@ -52,7 +52,14 @@ const onGetAnimals = function (event) {
   event.preventDefault()
   api.getAllAnimals()
     .then(ui.getAnimalSuccess)
-    .catch(ui.getAnimalfailure)
+    .catch(ui.getAnimalFailure)
+}
+
+const onGetUserAnimals = function (event) {
+  event.preventDefault()
+  api.getUserAnimals()
+    .then(ui.getUserAnimalSuccess)
+    .catch(ui.getUserAnimalFailure)
 }
 
 const onAddAnimal = function (event) {
@@ -98,6 +105,7 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
   $('#get-all').on('submit', onGetAnimals)
+  $('#get-user-animals').on('submit', onGetUserAnimals)
   $('#create-animal').on('submit', onAddAnimal)
   $('#update-animal').on('submit', onUpdateAnimal)
   $('#clear-list').on('submit', onClearAnimals)
