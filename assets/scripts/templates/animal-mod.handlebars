@@ -15,12 +15,7 @@
   </li>
   <li>Endangered Status: {{animal.endangered}}
   </li>
-  </li>
-  <li>User:{{#if animal.user_id}}
-    {{animal.user.email}}
-  {{else}}
-    No user information provided.
-  {{/if}}
+  <li>User:{{animal.user.email}}
   </li>
 </div>
 {{/each}}
