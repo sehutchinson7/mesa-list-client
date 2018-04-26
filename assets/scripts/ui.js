@@ -61,7 +61,9 @@ const changePasswordFailure = function (data) {
 const getAnimalSuccess = function (data) {
   $('#message').text('Successfully retrieved animals')
   $('#message').css('background-color', '#d5fdd5')
-  const showAnimalsHtml = showAnimalsTemplate({ animals: data.animals })
+  const showAnimalsHtml = showAnimalsTemplate({
+    animals: data.animals
+  })
   $('.handlebars').empty() // Prevents the list from duplicating if user clicks "View All Animals" multiple time
   $('.content').append(showAnimalsHtml)
 }
@@ -74,9 +76,18 @@ const getAnimalFailure = function (data) {
 const getUserAnimalSuccess = function (data) {
   $('#message').text('Successfully retrieved animals')
   $('#message').css('background-color', '#d5fdd5')
-  const showUserAnimalsHtml = showUserAnimalsTemplate({ animals: data.user.animals })
+  const showUserAnimalsHtml = showUserAnimalsTemplate({
+    animals: data.user.animals
+  })
   $('.handlebars-mod').empty() // Prevents the list from duplicating if user clicks "View All Animals" multiple time
   $('.content').append(showUserAnimalsHtml)
+  if (data.foods.length === 0) {
+    $('#update-message').text("You haven't added any animals yet")
+    $('#update-message').css('background-color', '#ff6666')
+    setTimeout(() => {
+      $('#update-message').text('')
+    }, 5000)
+  }
 }
 
 const addAnimalSuccess = function (data) {
