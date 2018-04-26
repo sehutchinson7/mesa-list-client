@@ -54,29 +54,29 @@
       <form id="create-animal" class="hidden">
         <legend>Add Animal to database</legend>
         <p>Is the animal endangered?</p>
-        <input type="radio" class="Yes" name="animal[endangered]" value='true'>
+        <input required type="radio" class="Yes" name="animal[endangered]" value='true'>
         <label for="Yes">Yes</label>
-        <input type="radio" class="No" name="animal[endangered]" value='false'>
+        <input required type="radio" class="No" name="animal[endangered]" value='false'>
         <label for="No">No</label>
-        <input type="text" name="animal[name]" placeholder="Animal Name">
+        <input required type="text" name="animal[name]" placeholder="Animal Name">
         <input type="submit" value="Add Animal">
       </form>
 
     <form id="update-animal" class="hidden">
       <legend>Update existing animal in database</legend>
       <p>Is the animal endangered?</p>
-      <input type="radio" class="Yes" name="animal[endangered]" value='true'>
+      <input required type="radio" class="Yes" name="animal[endangered]" value='true'>
       <label for="Yes">Yes</label>
-      <input type="radio" class="No"name="animal[endangered]" value='false'>
+      <input required type="radio" class="No"name="animal[endangered]" value='false'>
       <label for="No">No</label>
-      <input type="text" name="animal[name]" placeholder="Animal Name">
+      <input required type="text" name="animal[name]" placeholder="Animal Name">
       <input type="integer" name="animal[id]" placeholder="Animal ID">
       <input type="submit" value="Update">
     </form>
 
     <form id="delete-animal" class="hidden">
       <legend>Delete animal from database</legend>
-      <input type="text" name="name" placeholder="Animal Name">
+      <input required type="text" name="name" placeholder="Animal Name">
       <input type="integer" name="animal[id]" placeholder="Animal ID">
       <input type="submit" value="Delete">
     </form>
