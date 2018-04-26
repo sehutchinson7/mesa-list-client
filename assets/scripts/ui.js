@@ -72,18 +72,16 @@ const getAnimalFailure = function (data) {
 }
 
 const getUserAnimalSuccess = function (data) {
-  console.log(data)
   $('#message').text('Successfully retrieved animals')
   $('#message').css('background-color', '#d5fdd5')
   const showUserAnimalsHtml = showUserAnimalsTemplate({ animals: data.user.animals })
-  $('.handlebars').empty() // Prevents the list from duplicating if user clicks "View All Animals" multiple time
+  $('.handlebars-mod').empty() // Prevents the list from duplicating if user clicks "View All Animals" multiple time
   $('.content').append(showUserAnimalsHtml)
 }
 
 const addAnimalSuccess = function (data) {
   $('#message').text('Successfully added an animal')
   $('#message').css('background-color', '#d5fdd5')
-  console.log(data)
 }
 
 const addAnimalFailure = function (data) {

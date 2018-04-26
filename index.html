@@ -15,6 +15,7 @@
     <body>
       <h1>Endangered Species in Massachusetts</h1>
       <div id="message"></div>
+
       <form id="sign-up" class="border">
         <fieldset>
           <legend>Sign up</legend>
@@ -56,7 +57,7 @@
         <label for="Yes">Yes</label>
         <input type="radio" class="No" name="animal[endangered]" value='false'>
         <label for="No">No</label>
-        <input type="text" name="animal[name]" placeholder="animal name">
+        <input type="text" name="animal[name]" placeholder="Animal Name">
         <input type="submit" value="Add Animal">
       </form>
 
@@ -67,15 +68,15 @@
       <label for="Yes">Yes</label>
       <input type="radio" class="No"name="animal[endangered]" value='false'>
       <label for="No">No</label>
-      <input type="text" name="animal[name]" placeholder="animal name">
-      <input type="integer" name="animal[id]" placeholder="id value">
+      <input type="text" name="animal[name]" placeholder="Animal Name">
+      <input type="integer" name="animal[id]" placeholder="Animal ID">
       <input type="submit" value="Update">
     </form>
 
     <form id="delete-animal" class="hidden">
       <legend>Delete animal from database</legend>
-      <input type="text" name="name" placeholder="animal name">
-      <input type="integer" name="animal[id]" placeholder="id value">
+      <input type="text" name="name" placeholder="Animal Name">
+      <input type="integer" name="animal[id]" placeholder="Animal ID">
       <input type="submit" value="Delete">
     </form>
 

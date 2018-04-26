@@ -4,7 +4,6 @@ const ui = require('./ui')
 
 const onSignUp = function (event) {
   event.preventDefault()
-  // console.log('sign up ran!')
 
   const data = getFormFields(this)
   document.getElementById('sign-up').reset()
@@ -15,7 +14,6 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-  // console.log('sign in ran!')
 
   const data = getFormFields(this)
   document.getElementById('sign-in').reset()
@@ -29,7 +27,6 @@ const onSignIn = function (event) {
 
 const onChangePassword = function (event) {
   event.preventDefault()
-  // console.log('change password ran!')
 
   const data = getFormFields(this)
   document.getElementById('change-password').reset()
@@ -40,7 +37,6 @@ const onChangePassword = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-  // console.log('sign out ran')
   api.signOut()
     .then(ui.signOutSuccess)
     // clear the table after a sign out so next user who signs in starts with no list being displayed
@@ -75,7 +71,6 @@ const onAddAnimal = function (event) {
 const onUpdateAnimal = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   api.updateAnimal(data)
     .then(ui.updateAnimalSuccess)
     // clear the table after an animal is updated
@@ -92,7 +87,6 @@ const onClearAnimals = function () {
 const onDeleteAnimal = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   api.deleteAnimal(data)
     .then(ui.deleteAnimalSuccess)
     // clear the table after an animal is deleted

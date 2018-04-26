@@ -75,7 +75,6 @@ const addAnimal = function (data) {
 }
 
 const updateAnimal = function (data) {
-  console.log(data)
   return $.ajax({
     url: config.apiUrl + `/animals/` + data.animal.id,
     method: 'PATCH',
@@ -88,7 +87,6 @@ const updateAnimal = function (data) {
 }
 
 const deleteAnimal = function (data) {
-  console.log(data)
   return $.ajax({
     url: config.apiUrl + `/animals/` + data.animal.id,
     method: 'DELETE',
