@@ -68,6 +68,13 @@ const getAnimalSuccess = function (data) {
   $('.handlebars').empty() // Prevents the list from duplicating if user clicks "View All Animals" multiple time
   $('.content').append(showAnimalsHtml)
   $('#clear-list').removeClass('hidden') // Show clear button when user clicks "View All Animals"
+  if (data.animals && data.animals.length === 0) {
+    $('#update-message').text("You haven't added any animals yet")
+    $('#update-message').css('background-color', '#ff6666')
+    setTimeout(() => {
+      $('#update-message').text('')
+    }, 5000)
+  }
 }
 
 const getAnimalFailure = function (data) {
