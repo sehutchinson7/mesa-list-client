@@ -86,6 +86,7 @@ const onClearAnimals = function () {
   event.preventDefault()
   $('.handlebars').hide() // Clears the  get-all list when user clicks clear button
   $('.handlebars-mod').hide() // Clears the user list when user clicks clear button
+  $('#clear-list').addClass('hidden') // Hide clear button after user clears list
 }
 
 const onDeleteAnimal = function (event) {

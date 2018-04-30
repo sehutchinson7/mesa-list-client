@@ -67,6 +67,7 @@ const getAnimalSuccess = function (data) {
   })
   $('.handlebars').empty() // Prevents the list from duplicating if user clicks "View All Animals" multiple time
   $('.content').append(showAnimalsHtml)
+  $('#clear-list').removeClass('hidden') // Show clear button when user clicks "View All Animals"
 }
 
 const getAnimalFailure = function (data) {
@@ -77,6 +78,7 @@ const getAnimalFailure = function (data) {
 const getUserAnimalSuccess = function (data) {
   $('#message').text('Successfully retrieved animals')
   $('#message').css('background-color', '#d5fdd5')
+  $('#clear-list').removeClass('hidden') // Show clear button when user clicks "View My Animals"
   const showUserAnimalsHtml = showUserAnimalsTemplate({
     user: data.user
   })
