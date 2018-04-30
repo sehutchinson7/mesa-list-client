@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+      <title>Endangered Animals in Massachusetts</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>Endangered Species in Massachusetts</h1>
+      <div id="message"></div>
+      <div id="update-message"></div>
+
+      <form id="sign-up" class="border">
+        <fieldset>
+          <legend>Sign up</legend>
+          <input type="email" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input type="submit" value="Sign up">
+        </fieldset>
+      </form>
+
+      <form id="sign-in" class="border">
+        <fieldset>
+            <legend>Sign in</legend>
+            <input type="text" name="credentials[email]" placeholder="Email">
+            <input type="password" name="credentials[password]" placeholder="Password">
+            <input type="submit" value="Sign In">
+        </fieldset>
+      </form>
+
+      <form id="sign-out" class="hidden">
+        <fieldset>
+          <input type="submit" value="Sign out">
+        </fieldset>
+      </form>
+
+      <form id="change-password" class="border hidden">
+        <fieldset>
+            <legend>Change Password</legend>
+            <input type="password" name="passwords[old]" placeholder="Old Password">
+            <input type="password" name="passwords[new]" placeholder="New Password">
+            <input type="submit" value="Change Password">
+        </fieldset>
+      </form>
+
+      <form id="create-animal" class="hidden">
+        <legend>Add Animal to database</legend>
+        <p>Is the animal endangered?</p>
+        <input required type="radio" class="Yes" name="animal[endangered]" value='true'>
+        <label for="Yes">Yes</label>
+        <input required type="radio" class="No" name="animal[endangered]" value='false'>
+        <label for="No">No</label>
+        <input required type="text" name="animal[name]" placeholder="Animal Name">
+        <input type="submit" value="Add Animal">
+      </form>
+
+    <form id="update-animal" class="hidden">
+      <legend>Update existing animal in database</legend>
+      <p>Is the animal endangered?</p>
+      <input required type="radio" class="Yes" name="animal[endangered]" value='true'>
+      <label for="Yes">Yes</label>
+      <input required type="radio" class="No"name="animal[endangered]" value='false'>
+      <label for="No">No</label>
+      <input required type="text" name="animal[name]" placeholder="Animal Name">
+      <input type="integer" name="animal[id]" placeholder="Animal ID">
+      <input type="submit" value="Update">
+    </form>
+
+    <form id="delete-animal" class="hidden">
+      <legend>Delete animal from database</legend>
+      <input type="integer" name="animal[id]" placeholder="Animal ID">
+      <input type="submit" value="Delete">
+    </form>
+
+    <div class="content hidden">
+      <form id="get-all">
+        <input type="submit" value="View All Animals">
+      </form>
+      <form id="clear-list" class="hidden">
+        <input type="submit" value="Clear List">
+      </form>
+      <form id="get-user-animals">
+        <input type="submit" value="View My Animals">
+      </form>
+    </div>
+  </body>
+</html>
