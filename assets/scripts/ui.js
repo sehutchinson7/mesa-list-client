@@ -60,8 +60,6 @@ const changePasswordFailure = function (data) {
 }
 
 const getAnimalSuccess = function (data) {
-  $('#message').text('Successfully retrieved animals')
-  $('#message').css('background-color', '#d5fdd5')
   const showAnimalsHtml = showAnimalsTemplate({
     animals: data.animals
   })
@@ -69,11 +67,14 @@ const getAnimalSuccess = function (data) {
   $('.content').append(showAnimalsHtml)
   $('#clear-list').removeClass('hidden') // Show clear button when user clicks "View All Animals"
   if (data.animals && data.animals.length === 0) {
-    $('#update-message').text("You haven't added any animals yet")
+    $('#update-message').text('There are currently no animals in the database.')
     $('#update-message').css('background-color', '#ff6666')
     setTimeout(() => {
       $('#update-message').text('')
     }, 5000)
+  } else {
+    $('#message').text('Successfully retrieved animals')
+    $('#message').css('background-color', '#d5fdd5')
   }
 }
 
@@ -83,20 +84,21 @@ const getAnimalFailure = function (data) {
 }
 
 const getUserAnimalSuccess = function (data) {
-  $('#message').text('Successfully retrieved animals')
-  $('#message').css('background-color', '#d5fdd5')
-  $('#clear-list').removeClass('hidden') // Show clear button when user clicks "View My Animals"
   const showUserAnimalsHtml = showUserAnimalsTemplate({
     user: data.user
   })
   $('.handlebars-mod').empty() // Prevents the list from duplicating if user clicks "View All Animals" multiple time
   $('.content').append(showUserAnimalsHtml)
+  $('#clear-list').removeClass('hidden') // Show clear button when user clicks "View My Animals"
   if (data.user.animals && data.user.animals.length === 0) {
     $('#update-message').text("You haven't added any animals yet")
     $('#update-message').css('background-color', '#ff6666')
     setTimeout(() => {
       $('#update-message').text('')
     }, 5000)
+  } else {
+    $('#message').text('Successfully retrieved animals')
+    $('#message').css('background-color', '#d5fdd5')
   }
 }
 
