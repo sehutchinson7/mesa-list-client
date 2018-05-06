@@ -7,6 +7,7 @@
 </p>
 <h3> Technologies Used: </h3>
 <ul>
+  <li>Atom Editor</li>
   <li>AJAX</li>
   <li>CSS</li>
   <li>Handlebars</li>
