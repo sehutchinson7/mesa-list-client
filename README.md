@@ -1,46 +1,44 @@
-<h1><b>Tic-Tac-Toe</b></h1>
-<p> View and play my game here: https://sehutchinson7.github.io/tic-tac-toe-client/
+<h1><b>Species Vulnerability Tracking App</b></h1>
+<p> This is the client-side repo for the Endangered Species List application. The app allows users to add species in Massachusetts, and specify whether or not they are endangered.
+<p><a href="https://sehutchinson7.github.io/mesa-list-client/">Front-end</a><br>
+<a href="https://mesa-list-server.herokuapp.com/">Back-end</a><br>
 <h3> Background: </h3>
-<p> The goal of this project is to develop a web application based off the popular, well-known game of tic-tac-toe. This project designs a front-end web application that interacts with a game API. The game API was developed as part of General Assembly's Web Development Immersive curriculum. For more details please see https://git.generalassemb.ly/ga-wdi-boston/game-project.
+<p> The goal of this project is to develop a full-stack web application that allows user's to track species of concern in Massachusetts. The idea for this project was based off the MESA List for Massachusetts. For more backgroud information on the Massachusetts MESA List, check out https://www.mass.gov/service-details/list-of-endangered-threatened-and-special-concern-species.
 </p>
-<h3> Game Description </h3>
-<p> After a user signs up and signs in, they are able to play a game of tic-tac-toe with their opponent. Once signed in, a user is also given the option to change their password. The game logic assumes that player X goes first and alternates turns with their opponent (player O). Each time a user hits the "New Game" button, their game is stored using the game API. A user can keep track of their total games played by clicking the "Get Games" button.
-</p>
-<h3> Planning Proces</h3>
-<ul>
-  <li>Utilize wireframes and whiteboarding for project planning purposes.
-  <li>Structure basic html/css layout with 3x3 table (each cell has an id 0-8).</li>
-  <li>Set up user forms and use AJAX requests (POST, PATCH, DELETE) and jquery.</li>
-  <li>Set up game logic following project specifications. </li>
-  <li>Provide user with UI feedback.
-  <li>Store user data to the game API using AJAX requests (POST, GET, PATCH).</li>
-</ul>
-<p> The project provided a challenging experience in learning web development skills and technologies. In order to work through these challenges, the developer utilized white boarding (see: https://imgur.com/A3GXLSL for organization and planning purposes).
 <h3> Technologies Used: </h3>
 <ul>
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>Javascript</li>
   <li>AJAX</li>
+  <li>CSS</li>
+  <li>Handlebars</li>
+  <li>HTML</li>
+  <li>Javascript</li>
   <li>jQuery</li>
+  <li>JSON</li>
+  <li>Ruby on Rails (Back-end)</li>
 </ul>
-
-<h3> User Stories: </h3>
+<h3> Project Description & Planning Process </h3>
+<p> After a user signs up and signs in, they are able to view all animals that have been added to the database. The goal was to for a state or environmental organization.  A registered user can keep track of their entries by clicking on the "View My Animals" button. Additionally, a user can view all entries made into the database by clicking the "View All Animals" button. The user has the capability of updating or deleting their inputs, but not the inputs of their colleagues.
+</p>
+<h3> Wireframes & User Stories</h3>
+<p> The project provided a challenging experience in creating a full-stack application skills and technologies. In order to work through these challenges, the developer utilized white boarding for organization and planning purposes:
 <ul>
- <li> As an interested user, I would like to be able to sign up for tic-tac-toe with an email, password, and password confirmation.</li>
-  <li> As a registered user, I would like to be able to sign in and change my password.</li>
-  <li> As a registered user I would like to play a game of tic-tac-toe against my opponent after signing in.</li>
-  <li> As a registered user, I would like the game to announce the winner and then stop the game.</li>
-  <li> As a registered user, I would like to be able to play new games after a game ends.</li>
-  <li> As a registered user, I would like to keep track of total games played.</li>
-  <li> As a user, I want to prevent my opponent from cheating by clicking in a cell that has already been taken, or manipulating the board after I win.</li>
+  <li><a href="https://imgur.com/iXwAk3Y">Sign In Wireframe </a></li>
+  <li><a href="https://imgur.com/SZiFOHm">Signed In Wireframe </a></li>
 </ul>
-<h3> Wire Frames: </h3>
+<h6>Developer Stories</h6>
 <ul>
-  <li> Initial Idea: https://imgur.com/Sr1oMd2</li>
-  <li> Wireframe Revised: https://imgur.com/ngUP4kT </li>
+  <li>As a developer, I want to utilize wireframes and whiteboarding for project planning purposes.</li>
+  <li>As a developer, I want to create front-end view using HTML and CSS.</li>
+  <li>As a developer, I want to set up user forms using AJAX requests and jquery.</li>
+  <li>As a developer, I want to provide user with UI feedback</li>
+</ul>
+<h6>User Stories</h6>
+<ul>
+  <li>As a registered user, I would like a web app where I can keep track of endangered species in Massachusetts.</li>
+  <li>As a registered user, I want to view the entries of other users within my organization</li>
+  <li>As a registered user, I would like myself and my colleagues to update the vulnerability status of a species</li>
 </ul>
 <h3> Next Steps: </h3>
-<p> The objective of this game was to create a functional web app outlined above.  The next steps will focus on styling using CSS/SASS in order to create a tic-tac-toe experience that is not only functional, but eye catching. Another goal for this project is to introduce multi-player games so two players can sign in and play from different devices. This development will also introduce media queries for mobile play. These changes will enhance the user experience and build on the web development skills listed above.
+<p> The objective of this game was to create a functional web app outlined above. Next steps would be to seed the databae using a csv file of all the MESA list entries for Massachusetts. Modifications would be made based off of different vulnerablility categories:
 
 For inquiries, you can contact this developer at sara@hutchinsongis.com
