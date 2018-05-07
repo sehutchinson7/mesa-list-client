@@ -38,7 +38,7 @@ For backgroud information on the Massachusetts MESA List, check out https://www.
   <li>As a developer, I want to utilize wireframes and whiteboarding for project planning purposes.</li>
   <li>As a developer, I want to create front-end view using HTML and CSS.</li>
   <li>As a developer, I want to set up user forms using AJAX requests and jquery.</li>
-  <li>As a developer, I want to provide user with UI feedback</li>
+  <li>As a developer, I want to provide user with UI feedback.</li>
 </ul>
 <h5>User Stories</h5>
 <ul>
