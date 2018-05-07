@@ -4,7 +4,7 @@
 </p>
 <p>Learn more about how Ruby on Rails is used for the back-end of the application.<br>
 Back-end repo:
-https://mesa-list-server.herokuapp.com/
+https://github.com/sehutchinson7/mesa-list-server
 </p>
 <h3> Background: </h3>
 <p> The goal of this project is to develop a full-stack web application that allows user's to track species of concern in Massachusetts. The idea for this project is based on the MESA List for Massachusetts.  The goal for the application is to allow users to keep track of vulnerable species in Massachusetts after signing in. A user can view all other species added to the database and also make contributions.
