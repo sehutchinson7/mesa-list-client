@@ -7,7 +7,7 @@ Back-end repo:
 https://github.com/sehutchinson7/mesa-list-server
 </p>
 <h3> Background: </h3>
-<p> The goal of this project is to develop a full-stack web application that allows user's to track species of concern in Massachusetts. The idea for this project is based on the MESA List for Massachusetts.  The goal for the application is to allow users to keep track of vulnerable species in Massachusetts after signing in. A user can view all other species added to the database and also make contributions.
+<p> The goal of this project is to develop a full-stack web application that allows users to track species of concern in Massachusetts. The idea for this project is based on the MESA List for Massachusetts.  The goal for the application is to allow users to keep track of vulnerable species in Massachusetts after signing in. A user can view all other species added to the database and also make contributions.
 
 
 For backgroud information on the Massachusetts MESA List, check out https://www.mass.gov/service-details/list-of-endangered-threatened-and-special-concern-species.
@@ -53,7 +53,7 @@ For backgroud information on the Massachusetts MESA List, check out https://www.
   <li>As a user, I want to track ecological impact over time and by county.</li>
   <li>As a user, I want to view the spatial range of different species of concern in Massachusetts.</li>
   <li>As a user, I want to know when each species was added to the Mesa list so I can assess ecological impact over time.</li>
-  <li>As a user, I want to incorporate Geographic Information Science (GIS) to gain a deeper understanding of ecological impact for Mesa list species in Massachusetts</li><br>
+  <li>As a user, I want to incorporate Geographic Information Science (GIS) to gain a deeper understanding of ecological impact for Mesa list species in Massachusetts.</li><br>
 
   View next steps wireframe <a href="https://imgur.com/lI9PVwM">here</a>
 </ul>
