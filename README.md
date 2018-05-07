@@ -43,8 +43,8 @@ For backgroud information on the Massachusetts MESA List, check out https://www.
 <h5>User Stories</h5>
 <ul>
   <li>As a registered user, I would like a web app where I can keep track of endangered species in Massachusetts.</li>
-  <li>As a registered user, I want to view the entries of other users within my organization</li>
-  <li>As a registered user, I would like myself and my colleagues to update the vulnerability status of a species</li>
+  <li>As a registered user, I want to view the entries of other users within my organization.</li>
+  <li>As a registered user, I would like to update the vulnerability status of a species I added.</li>
 </ul>
 <h3> Next Steps: </h3>
 <p> The objective of this project was to create a functional full stack web app outlined above. The next steps would be to add in different vulnerability categories. Modifications to the project would include modifying the database by seeding in a CSV with all the MESA list species for Massachusetts. Additionally, different vulnerablility categories would include: endangered, threatened, and species of concern. The workflow would have to be modified to include different tables and categorize species by taxonomic group, including: Mammals, Birds, Reptiles, Amphibians, Fish, Invertebrates, and Plants. The following user stories could be used as a reference for future work, which would also look at the MESA list from more of a spatial perspective.</p>
