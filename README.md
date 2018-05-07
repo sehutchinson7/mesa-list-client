@@ -55,7 +55,7 @@ For backgroud information on the Massachusetts MESA List, check out https://www.
   <li>As a user, I want to know when each species was added to the Mesa list so I can assess ecological impact over time.</li>
   <li>As a user, I want to incorporate Geographic Information Science (GIS) to gain a deeper understanding of ecological impact for Mesa list species in Massachusetts</li><br>
 
-  View new steps wireframe <a href="https://imgur.com/lI9PVwM">here</a>
+  View next steps wireframe <a href="https://imgur.com/lI9PVwM">here</a>
 </ul>
 
 For inquiries, you can contact this developer at sara@hutchinsongis.com
